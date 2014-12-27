@@ -5,24 +5,96 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 1px rgba(0,0,0,0.01);
 }
 
-
-/* CUSTOMIZE THE NAVBAR
+/* CUSTOMIZE THE TOOLBAR / NAVBAR
 -------------------------------------------------- */
 
-/* Background gradient for .navbar, from top to bottom. */
-.navbar-inverse {
-    background-image: -webkit-linear-gradient(top, #282828 0%, #111 100%);
-    background-image:      -o-linear-gradient(top, #282828 0%, #111 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#282828), to(#111));
-    background-image:         linear-gradient(to bottom, #282828 0%, #111 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff282828', endColorstr='#ff111111', GradientType=0);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    background-repeat: repeat-x;
+.toolbar {
+    height: 30px;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0 1px 7px rgba(0,0,0,0.5);
+}
+.toolbar-fixed-top,
+.toolbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1031;
+}
+.toolbar > .container {
+    margin: 5px auto;
+}
+.toolbar-nav {
+    float: left;
+    margin: 7.5px -15px 0;
+    padding-left: 0;
+    display: block;
+    list-style: none;
 }
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* Positioning the nav elements with .toolbar / .navbar. */
+.toolbar-nav.left,
+.navbar-nav.left {
+    float: left;
+}
+.toolbar-nav.right,
+.navbar-nav.right {
+    float: right;
+}
+
+.toolbar-nav.left > li {
+    margin-right: 30px;
+}
+.toolbar-nav.right > li {
+    margin-left: 30px;
+}
+.toolbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #929596;
+    font-size: 0.75em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.toolbar-nav > li > a:hover {
+    color: #fff;
+}
+
+.navbar-nav > li > a {
+    padding: 24px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+.navbar-nav > li > a:hover {
+    background: rgba(0,0,0,0.6);
+}
+
+@media (min-width: 768px) {
+    .toolbar-nav {
+        float: left;
+        margin: 0;
+    }
+    .toolbar-nav > li {
+        float: left;
+    }
+}
+
+.navbar {
+    height: 98px;
+    padding-top: 30px;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Special class on .container surrounding .toolbar / .navbar, used for positioning it into place. */
+.toolbar-wrapper,
 .navbar-wrapper {
   position: absolute;
   top: 0;
@@ -32,14 +104,17 @@ body {
 }
 
 /* Flip around the padding for proper display in narrow viewports */
+.toolbar-wrapper > .container,
 .navbar-wrapper > .container {
   padding-right: 0;
   padding-left: 0;
 }
+.toolbar-wrapper .toolbar,
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
 }
+.toolbar-wrapper .toolbar .container,
 .navbar-wrapper .navbar .container {
   width: auto;
 }
