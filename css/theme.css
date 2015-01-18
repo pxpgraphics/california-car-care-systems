@@ -280,8 +280,45 @@ a:hover {
 /* TESTIMONIALS CSS
 -------------------------------------------------- */
 
-#testimonials-carousel {
-    height: 200px;
+.testimonials > .carousel {
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.testimonials > .carousel-inner {
+    height: 250px;
+}
+
+.testimonials > .carousel-inner > .item {
+
+}
+
+.testimonials > .item {
+    height: 250px;
+    background: none;
+}
+
+.testimonials.carousel-caption {
+    top: 0;
+    color: rgba(175,175,175,1);
+    font-weight: 300;
+    font-size: 0.8em;
+    text-align: left;
+    text-shadow: none;
+}
+
+.testimonials > .carousel-indicators {
+    bottom: 0;
+}
+
+.testimonials > .carousel-indicators li {
+    background: rgba(215,215,215,1);
+}
+
+.testimonials > .carousel-indicators li:hover,
+.testimonials > .carousel-indicators li.active {
+    background: rgba(215,20,20,1);
+    border: 1px solid rgba(215,20,20,1);
 }
 
 /* MAP CSS

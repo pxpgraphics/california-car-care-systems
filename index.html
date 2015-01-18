@@ -158,7 +158,6 @@
         </div><!-- /.carousel -->
     </header>
 
-    <!-- Testimonials content -->
     <div class="testimonials" role="testimonials">
         <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -168,35 +167,33 @@
                 <li data-target="#testimonials-carousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="item">
+                <div class="item active" style="background: green;">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Example headline.</h1>
-                            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
                             <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            <p>Lauren Green</p>
                         </div>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" style="background: black;">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>One more for good measure.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            <p>Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                            <p>Shannon Black</p>
                         </div>
                     </div>
                 </div>
+                <div class="item" style="background: brown;">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                            <p>Kate Brown, Toyota</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div><!-- /.carousel -->
-    </div>
+    </div><!-- /.testimonials -->
 
     <!-- Map content -->
     <div id="map-canvas"></div>
@@ -206,8 +203,7 @@
         <div class="container" role="footer">
             <div class="footer-left">
                 <img class="footer-logo" src="" />
-                <p class="footer-copyright">Copyright &copy; 2014 California Car
-                    Systems, LLC.<br/>Built with love in California by
+                <p class="footer-copyright">Copyright &copy; 2014 California Car Systems, LLC.<br/>Built with love in California by
                     <a href="http://www.pxpgraphics.com/" target="_blank">PXPGraphics</a>.</p>
             </div><!-- /.footer-left -->
             <div class="footer-left">
@@ -269,5 +265,32 @@
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map-canvas');
+            var mapLocation = new google.maps.LatLng(37.7393542,-122.2016592);
+            var mapOptions = {
+                center: mapLocation,
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false
+            };
+            var mapStyles = [
+                {
+                    stylers: [
+                        { saturation: -100 }
+                    ]
+                }
+            ];
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            map.set('styles', mapStyles);
+            var mapMarker = new google.maps.Marker({
+                position: mapLocation,
+                map: map,
+                title: 'California Car Care Systems'
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </body>
 </html>
