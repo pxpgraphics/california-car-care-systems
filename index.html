@@ -160,9 +160,42 @@
 
     <!-- Testimonials content -->
     <div class="testimonials" role="testimonials">
-        <div class="container">
-            <h1>Hello, world!</h1>
-        </div><!-- /.container -->
+        <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonials-carousel" data-slide-to="1"></li>
+                <li data-target="#testimonials-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Example headline.</h1>
+                            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div>
+        </div><!-- /.carousel -->
     </div>
 
     <!-- Map content -->
@@ -224,7 +257,7 @@
             </div><!-- /.footer-right -->
         </div><!-- /.container -->
         <div class="footer-spacer left"></div>
-        <a href="#"><div class="footer-top left">Top</div></a>
+        <a href=""><div class="footer-top left">Top</div></a>
         <div class="footer-stripe"></div>
     </footer>
 
@@ -235,6 +268,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="lib/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

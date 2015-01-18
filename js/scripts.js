@@ -1,3 +1,4 @@
+// Google map customization.
 function initialize() {
     var mapCanvas = document.getElementById('map-canvas');
     var mapLocation = new google.maps.LatLng(37.7393542,-122.2016592);
@@ -23,3 +24,11 @@ function initialize() {
     });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+// Scroll to top.
+$(document).ready(function() {
+    $('.footer-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 300);
+    })
+});
