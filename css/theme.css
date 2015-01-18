@@ -72,6 +72,18 @@ a:hover {
     color: #fff;
 }
 
+.nav .open>a, .nav .open > a:hover, .nav .open > a:focus {
+    border-color: rgba(255,255,255,0.125);
+    background: rgba(0,0,0,0.8);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.8)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0,0.8) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
 .navbar-nav > li > a {
     margin-top: 10px;
     padding: 19px 20px;
@@ -263,6 +275,120 @@ a:hover {
 }
 .partner-logo > img {
     padding: 0 5%;
+}
+
+/* FOOTER CSS
+-------------------------------------------------- */
+
+.footer, .footer a {
+    color: rgba(175,175,175,1);
+}
+
+.footer-left {
+    float:left;
+    padding: 0 20px;
+}
+
+.footer-right {
+    padding-top: 70px;
+}
+
+/* CUSTOMIZE COMPANY INFO */
+
+img.footer-logo {
+    width: 300px;
+    height: 70px;
+    background: rgba(0,0,0,0.25);
+    margin: 0 60px 0 -20px;
+}
+
+.footer-copyright {
+    margin: 40px 0 0 -20px;
+    font-size: 0.8em;
+}
+
+.footer-copyright a {
+    color: rgba(215,20,20,1);
+}
+
+/* CUSTOMIZE HOURS */
+
+.footer-hours {
+    margin: 0 20px 0 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    font-size: 0.9em;
+}
+
+p.footer-hours {
+    color: rgba(100,100,100, 1);
+    float: none;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* CUSTOMIZE LINKS & ICONS */
+
+ul.footer-payment,
+ul.footer-icons {
+    margin-right: 20px;
+    float:left;
+}
+
+.footer-icons li {
+    width: 20px;
+    height: 20px;
+    background: rgba(215,20,20,1);
+}
+
+.footer-links {
+    margin: 20px 50px auto auto;
+    float: right;
+}
+
+.footer-links li, .footer-links a {
+    margin-left: 10px !important;
+}
+
+.footer-payment li,
+.footer-icons li, .footer-icons a,
+.footer-links li, .footer-links a {
+    margin-left: 20px;
+    padding: 0;
+    list-style: none;
+    float: left;
+    font-size: 0.925em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-stripe {
+    width: 100%;
+    height: 5px;
+    background: rgba(215,20,20,1);
+    margin-top: 45px;
+    margin-bottom: -100px;
+}
+
+.footer-spacer {
+    width: 90%;
+    height: 50px;
+}
+
+.footer-top {
+    width: 50px;
+    height: 50px;
+    background: rgba(215,20,20,1);
+    color: rgba(255,255,255,1);
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer-spacer.left, .footer-top.left {
+    float: left;
+    margin-bottom: -20px;
 }
 
 /* RESPONSIVE CSS
