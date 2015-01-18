@@ -281,42 +281,57 @@ a:hover {
 -------------------------------------------------- */
 
 .testimonials > .carousel {
-    height: 250px;
+    height: 220px;
     margin-bottom: 20px;
 }
 
-.testimonials > .carousel-inner {
-    height: 250px;
+.testimonials.container {
+    padding: 0 10%;
 }
 
-.testimonials > .carousel-inner > .item {
-
-}
-
-.testimonials > .item {
-    height: 250px;
-    background: none;
+.testimonials.carousel-image {
+    width: 140px;
+    height: 140px;
+    background: pink;
+    position: relative;
+    border-radius: 1000px;
+    float: left;
+    margin: 2% 0 0 10%;
 }
 
 .testimonials.carousel-caption {
-    top: 0;
+    width: 60%;
+    left: 5%;
+    position:relative;
+    margin-top: 3%;
     color: rgba(175,175,175,1);
     font-weight: 300;
-    font-size: 0.8em;
     text-align: left;
     text-shadow: none;
+    float: left;
 }
 
-.testimonials > .carousel-indicators {
+.testimonials.carousel-caption > p {
+    font-size: 1.3em;
+}
+
+#testimonials-carousel > .item,
+#testimonials-carousel > .carousel-inner,
+#testimonials-carousel > .carousel-inner > .item {
+    height: 220px;
+    background: none;
+}
+
+#testimonials-carousel > .carousel-indicators {
     bottom: 0;
 }
 
-.testimonials > .carousel-indicators li {
+#testimonials-carousel > .carousel-indicators li {
     background: rgba(215,215,215,1);
 }
 
-.testimonials > .carousel-indicators li:hover,
-.testimonials > .carousel-indicators li.active {
+#testimonials-carousel > .carousel-indicators li:hover,
+#testimonials-carousel > .carousel-indicators li.active {
     background: rgba(215,20,20,1);
     border: 1px solid rgba(215,20,20,1);
 }
@@ -485,6 +500,7 @@ ul.footer-icons {
   .featurette-heading {
     font-size: 50px;
   }
+
 }
 
 @media (min-width: 992px) {
